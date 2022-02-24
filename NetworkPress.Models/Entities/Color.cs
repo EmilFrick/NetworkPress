@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetworkPress.Models.Models.ColorModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,5 +16,24 @@ namespace NetworkPress.Models.Entities
         public string Name { get; set; }
         [Required]
         public string Hex { get; set; }
+
+        public Color()
+        {
+
+        }
+
+        public Color(ColorCreateModel model)
+        {
+            Name = model.Name;
+            Hex = model.Hex;
+        }
+
+        public Color UpdateColor(UpdateColorModel model)
+        {
+            Id = model.Id;
+            Name = model.Name;
+            Hex = model.Hex;
+            return this;
+        }
     }
 }

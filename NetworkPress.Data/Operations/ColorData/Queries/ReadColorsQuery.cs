@@ -8,5 +8,6 @@ using System.Threading.Tasks;
 
 namespace NetworkPress.Data.Operations.ColorData.Queries
 {
-    public record ReadColorQuery(int Id): IRequest<Color>;
+    public record ReadColorsQuery() : IRequest<IEnumerable<Color>>;
+    
 }

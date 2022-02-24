@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkPress.Data.Operations.ColorData.Queries
+namespace NetworkPress.Data.Operations.ColorData.Commands
 {
-    public record ReadColorQuery(int Id): IRequest<Color>;
+    public record DeleteColorCommand(int Id) : IRequest<Color>;
 }

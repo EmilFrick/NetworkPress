@@ -11,17 +11,19 @@ using System.Threading.Tasks;
 
 namespace NetworkPress.Data.Operations.ColorData.Handlers
 {
-    public class ReadColorHandler : IRequestHandler<ReadColorQuery, Color>
+    public class ReadColorsHandler : IRequestHandler<ReadColorsQuery, IEnumerable<Color>>
     {
 
         private readonly AppDbContext _db;
 
-        public ReadColorHandler(AppDbContext db)
+        public ReadColorsHandler(AppDbContext db)
         {
             _db = db;
         }
 
-        public async Task<Color> Handle(ReadColorQuery request, CancellationToken cancellationToken) => await _db.Colors.FirstOrDefaultAsync(x => x.Id == request.Id);
-        
+        public async Task<IEnumerable<Color>> Handle(ReadColorsQuery request, CancellationToken cancellationToken)
+        {
+            return await _db.Colors.ToListAsync();
+        }
     }
 }

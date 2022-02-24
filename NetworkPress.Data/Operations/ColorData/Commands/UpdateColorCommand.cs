@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace NetworkPress.Data.Operations.ColorData.Commands
 {
-    public record CreateColorCommand(ColorCreateModel ColorModel) : IRequest<Color>;
+    public record UpdateColorCommand(int Id, UpdateColorModel Model) : IRequest<Color>;
 }
