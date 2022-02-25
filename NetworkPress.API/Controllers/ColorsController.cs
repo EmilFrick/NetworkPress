@@ -22,7 +22,7 @@ namespace NetworkPress.API.Controllers
         public async Task<IActionResult> GetColors() => Ok(await _mediator.Send(new ReadColorsQuery()));
         
         [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetColors(int id) => Ok(await _mediator.Send(new ReadColorQuery(id)));
+        public async Task<IActionResult> GetColors(int id) => Ok(await _mediator.Send(new ReadColorQuery(x=>x.Id== id)));
 
         [HttpPost]
         public async Task<IActionResult> CreateColor(ColorCreateModel color) => Ok(await _mediator.Send(new CreateColorCommand(color)));
@@ -31,6 +31,6 @@ namespace NetworkPress.API.Controllers
         public async Task<IActionResult> DeleteColor(int id) => Ok(await _mediator.Send(new DeleteColorCommand(id)));
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateColor(int id, UpdateColorModel model) => Ok(await _mediator.Send(new UpdateColorCommand(id, model)));
+        public async Task<IActionResult> UpdateColor(int id, ColorUpdateModel model) => Ok(await _mediator.Send(new UpdateColorCommand(id, model)));
     }
 }

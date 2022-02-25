@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkPress.Data.Operations.ColorData.Queries
+namespace NetworkPress.Data.Operations.IconData.Queries
 {
-    public record ReadColorQuery(Expression<Func<Color, bool>> Filter): IRequest<Color>;
+    public record ReadIconQuery(Expression<Func<Icon, bool>> Filter): IRequest<Icon>;
 }

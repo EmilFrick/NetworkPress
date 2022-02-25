@@ -17,5 +17,7 @@ namespace NetworkPress.Data.DataAccess
         }
 
         public DbSet<Color> Colors { get; set; }
+        public DbSet<Icon> Icons { get; set; }
+
     }
 }

@@ -21,7 +21,7 @@ namespace NetworkPress.Data.Operations.ColorData.Handlers
             _db = db;
         }
 
-        public async Task<Color> Handle(ReadColorQuery request, CancellationToken cancellationToken) => await _db.Colors.FirstOrDefaultAsync(x => x.Id == request.Id);
+        public async Task<Color> Handle(ReadColorQuery request, CancellationToken cancellationToken) => await _db.Colors.FirstOrDefaultAsync(request.Filter);
         
     }
 }

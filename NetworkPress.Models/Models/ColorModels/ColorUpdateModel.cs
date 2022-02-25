@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetworkPress.Models.Models.ColorModels
 {
-    public class UpdateColorModel
+    public class ColorUpdateModel
     {
         [Key]
         public int Id { get; set; }

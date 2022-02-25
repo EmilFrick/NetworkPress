@@ -28,7 +28,7 @@ namespace NetworkPress.Models.Entities
             Hex = model.Hex;
         }
 
-        public Color UpdateColor(UpdateColorModel model)
+        public Color UpdateColor(ColorUpdateModel model)
         {
             Id = model.Id;
             Name = model.Name;
