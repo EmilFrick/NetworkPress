@@ -8,7 +8,7 @@ namespace NetworkPress.Models.Models.IconModels
 {
     public class IconCreateModel
     {
-        public string IconValue { get; set; }
+        public string Value { get; set; }
         public string Binding { get; set; }
     }
 }

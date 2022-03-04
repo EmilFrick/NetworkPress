@@ -11,7 +11,7 @@ namespace NetworkPress.Models.Models.IconModels
     {
 
         public int Id { get; set; }
-        public string IconValue { get; set; }
+        public string Value { get; set; }
         public string Binding { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace NetworkPress.Models.Entities
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Hex { get; set; }
+        public string Value { get; set; }
 
         public Color()
         {
@@ -25,14 +25,14 @@ namespace NetworkPress.Models.Entities
         public Color(ColorCreateModel model)
         {
             Name = model.Name;
-            Hex = model.Hex;
+            Value = model.Hex;
         }
 
         public Color UpdateColor(ColorUpdateModel model)
         {
             Id = model.Id;
             Name = model.Name;
-            Hex = model.Hex;
+            Value = model.Hex;
             return this;
         }
     }

@@ -12,6 +12,6 @@ namespace NetworkPress.Models.Models.ColorModels
         [Required]
         public string Name { get; set; }
         [Required]
-        public string Hex { get; set; }
+        public string Value { get; set; }
     }
 }

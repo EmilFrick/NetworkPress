@@ -13,7 +13,7 @@ namespace NetworkPress.Models.Entities
         [Key]
         public int Id { get; set; }
         [Required]
-        public string IconValue { get; set; }
+        public string Value { get; set; }
         [Required]
         public string Binding { get; set; }
 
@@ -24,14 +24,14 @@ namespace NetworkPress.Models.Entities
 
         public Icon(IconCreateModel model)
         {
-            IconValue = model.IconValue;
+            Value = model.IconValue;
             Binding = model.Binding;
         }
 
         public Icon UpdateIcon(IconUpdateModel model)
         {
             Id = model.Id;
-            IconValue = model.IconValue;
+            Value = model.IconValue;
             Binding = model.Binding;
             return this;
         }
